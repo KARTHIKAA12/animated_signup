@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section .background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.Signin{
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    padding: 45px;
+    background: rgba(166, 238, 215, 0.096);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgb(11, 11, 26);
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 20px 20px rgb(8, 24, 37);
+    animation: flicker 2.5s infinite;
+}
+.Signin h1{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.Signin .text{
+    color: #0ff;
+    animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.Signin span{
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 10px;
+    color: rgba(20, 224, 231, 0.829);
+    padding: 2px;
+}
+.Signin span{
+    animation: flickering 2s infinite;
+}
+@keyframes flickering {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.Signin .inputbox input{
+    position: relative;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(89, 114, 136);
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    color: white;
+    margin-top: 10px;
+}
+.Signin .inputbox .glow{
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.295), 0 0 20px rgba(0, 255, 255, 0.308), 0 0 30px rgba(0, 255, 255, 0.253);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.671), 0 0 10px rgba(0, 255, 255, 0.671), 0 0 10px rgba(0, 255, 255, 0.671);
+  }
+}
+.Signin .inputbox ::placeholder{
+    color: aquamarine;
+    font-size: 1em;
+}
+.Signin .inputbox #button{
+    position: relative;
+    width: 40%;
+    margin-top: 10px;
+    left: 125px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 10px;
+    background-color: rgb(11, 53, 53);
+}
+.Signin .inputbox #button:hover{
+    background: rgb(31, 177, 177);
+}
+.Signin .two{
+    display: flex;
+    justify-content: space-between;
+    animation: flicker 1.5s infinite;
+}
+
+.Signin .two a{
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    color: lightskyblue;
+}
+.Signin .two a:nth-child(2){
+    text-decoration: underline;
+}
+@media (max-width: 769px){
+    .Signin{
+        width: 80%;
+        padding: 25px;
+    }
+    .Signin h2{
+        font-size: 1.5em;
+    }    
+    .Signin span, .Signin .two a{
+        font-size: 0.9em;
+    }
+    .Signin .inputbox input, .Signin .inputbox #button{
+        font-size: 1em;
+    }
+}
+@media (max-width :480px){
+    .Signin{
+        width: 90%;
+        padding: 20px;
+    }
+    .Signin h2{
+        font-size: 1.4em;
+    }    
+    .Signin span, .Signin .two a{
+        font-size: 0.8em;
+    }
+    .Signin .inputbox input, .Signin .inputbox #button{
+        font-size: 0.9em;
+    }
+}
